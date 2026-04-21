@@ -139,8 +139,55 @@ int main()
         case '1':
             mhs.addNode();
             break;
+        case '2':
+            if (mhs.listEmpty())
+            {
+                cout << "\nList Kosong\n";
+                break;
+            }
 
+            cout << "\n Masukkan no Mahasiswa yang akan dihapus: \n";
+            cin >> nim;
+
+            if (mhs.delNode(nim) ==  false)
+                cout << "\nData tidak ditemukan \n";
+            else
+                cout << "\n Data dengan no Mahasiswa " << nim << " berhasil dihapus \n";
+            break;
+
+        case '3':
+            mhs.traverse();
+            break;
+
+        case '4':
+        {
+            if(mhs.listEmpty())
+            {
+                cout << "\nList Kosong\n";
+                break;
+            }
+
+            Node *previous, *current;
+            cout << "\nMasukkan no Mahasiswa yang dicari: ";
+            cin >> nim;
+
+            if (mhs.search(nim, previous, current) == false)
+                cout << "\nData tidak ditemukan.\n";
+            else
+            {
+                cout << "\nData ditemukan.\n";
+                cout << "NIM Mahasiswa: " << current->noMhs << endl;
+            }
+            break;
+        }
+
+        case '5':
+            break;
+
+        default:
+            cout << "\nPilihan salah.\n";
+        }
         
     } while (ch != '5');
     return 0;
-};
+}
