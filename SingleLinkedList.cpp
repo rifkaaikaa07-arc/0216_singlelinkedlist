@@ -115,3 +115,10 @@ public:
     }
 
 };
+
+int main()
+{
+    LikedList mhs;
+    int nim;
+    char ch;
+};
