@@ -8,3 +8,15 @@ class Node
     long long noMhs;
     Node *next;
 };
+
+class LikedList
+{
+    Node *START;
+
+public:
+    LikedList ()
+    {
+        START = NULL;
+    
+    }
+};
