@@ -135,5 +135,12 @@ int main()
         cin >> ch;
 
         switch (ch)
+        {
+        case '1':
+            mhs.addNode();
+            break;
+
         
+    } while (ch != '5');
+    return 0;
 };
